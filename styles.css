@@ -2,6 +2,7 @@ body{
     background-color: #f9f7fe;
     margin: 0 auto;
     padding: 50px 50px;
+    cursor: default;
 }
 .icon{
     text-align: center;
@@ -35,7 +36,9 @@ body{
     width: fit-content;
     height: 100px ;
 }
-
+.degrees{
+    margin-top: 6px;
+}
 
 /*Search styling*/
 .search,.go{
@@ -44,18 +47,23 @@ border-radius: 5px;
 border: solid 1.5px;
 }
 .search{
-    width: 87%;
+    width: 80%;
 }
 .go{
-    width: 8%;
+    width: 10%;
+    padding: 6px 5px;
     background: blue;
     color: #f9f7fe;
-    transition: all ease 1s;
+    cursor: pointer;
+    transition: all ease 2ms;
 }
 .go:hover{
     background: #f9f7fe;
     color: blue;
-    transform: scale(1.1);
+}
+.go:active{
+    background: rgb(2, 2, 94);
+    color: #f9f7fe;
 }
 
 
@@ -84,7 +92,7 @@ footer{
 a{
     text-decoration: none;
     color: blueviolet;
-    cursor: default;
+    cursor: pointer;
 }
 
 ul{
