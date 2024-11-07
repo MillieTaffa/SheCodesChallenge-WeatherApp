@@ -30,25 +30,17 @@ body{
     
 }
 .temprate{
-    position: absolute;
     margin: 30px;
-    right: 27%;
-    font-weight: bold;
+    font-family: Bona Nova SC;
+    text-align: end;
 }
-.temp-unit{
-    height: fit-content;
-    margin: 33.200px 45px;
-    color: darkslategray;
-}
+
 .temp{
     display: flex;
     margin: 0;
     width: fit-content;
     height: 100px ;
     justify-content: flex-end;
-}
-.degrees{
-    margin-top: 6px;
 }
 
 /*Search styling*/
