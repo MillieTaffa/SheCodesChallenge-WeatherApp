@@ -1,0 +1,25 @@
+body{
+    background-color: #f9f7fe;
+    margin: 0 auto;
+    padding: 50px 50px;
+}
+
+.content{
+    background-color: #fff;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 40px;
+}
+
+footer{
+    text-align: center;
+    color: rgb(103, 101, 101);
+    cursor: default;
+    padding: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: blueviolet;
+    cursor: default;
+}
