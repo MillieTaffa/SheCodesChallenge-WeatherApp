@@ -1,3 +1,5 @@
+import { default as axios } from 'axios';
+
 function searchHandle(event) {
     event.preventDefault();
 

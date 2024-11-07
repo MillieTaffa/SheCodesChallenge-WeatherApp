@@ -1,128 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>My Weather App</title>
-</head>
-<body>
-    <!--Main Content--> 
-  <div class="content">
-    <header class="logo">
-        <!--Logo Section-->
-        <h1 class="icon">Daily Weather
-            <?xml version="1.0" encoding="UTF-8"?>
-            <svg width="24px" height="24px" 
-            stroke-width="1.5" viewBox="0 0 24 24" 
-            fill="none" xmlns="http://www.w3.org/2000/svg" 
-            color="#000000"><path 
-            d="M6 13C4.33333 13 1 14 1 18C1 22 4.33333 23 6 23H18C19.6667 23 23 22 23 18C23 14 19.6667 13 18 13" 
-            stroke="#000000" stroke-width="1.5" 
-            stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" 
-            stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19 9L20 9" 
-            stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 2V1" 
-            stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M18.5 3.5L17.5 4.5" 
-            stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.5 3.5L6.5 4.5" 
-            stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 9L5 9" stroke="#000000" 
-            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-        </h1>
-    </header>
-    <!--Search Panel-->
-    <form class="search-panel" id="search-engine">
-        <input type="text" 
-        placeholder="Enter a city" 
-        class="search" 
-        id="input">
-        <input type="button" 
-        value="Search" 
-        class="go" 
-        id="output">
-    </form>
-    <div class="items">
-        <section class="main-content">
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+        <title>My Weather App</title>
+    </head>
+    <body>
+        <!--Main Content--> 
+    <div class="content">
+        <header class="logo">
+            <!--Logo Section-->
+            <h1 class="icon">Daily Weather
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg width="24px" height="24px" 
+                stroke-width="1.5" viewBox="0 0 24 24" 
+                fill="none" xmlns="http://www.w3.org/2000/svg" 
+                color="#000000"><path 
+                d="M6 13C4.33333 13 1 14 1 18C1 22 4.33333 23 6 23H18C19.6667 23 23 22 23 18C23 14 19.6667 13 18 13" 
+                stroke="#000000" stroke-width="1.5" 
+                stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" 
+                stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19 9L20 9" 
+                stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 2V1" 
+                stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M18.5 3.5L17.5 4.5" 
+                stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.5 3.5L6.5 4.5" 
+                stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 9L5 9" stroke="#000000" 
+                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </h1>
+        </header>
+        <!--Search Panel-->
+        <form class="search-panel" id="search-engine">
+            <input type="text" 
+            placeholder="Enter a city" 
+            class="search" 
+            id="input">
+            <input type="button" 
+            value="Search" 
+            class="go" 
+            id="output">
+        </form>
+        <div class="items">
+            <section class="main-content">
 
-            <!--Temperature and Location section-->
+                <!--Temperature and Location section-->
 
-            <div class="temp"> 
-                <!--Location-->
-                <h1 class="location" id="place">
-                    Krugersdorp
-                </h1>   
-                <!--SVG/ Icon/Emoji-->
-                <div class="temprate">
-                    <div?xml version="1.0" encoding="UTF-8"? class="temp-unit">
-                    <svg width="30px" height="40px"
-                        stroke-width="1.5" viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        color="#000000">
-                            <path
-                            d="M12 4C6 4 6 8 6 10C4.33333 10 1 11 1 15C1 19 4.33333 20 6 20H18C19.6667 20 23 19 23 15C23 11 19.6667 10 18 10C18 8 18 4 12 4Z"
-                            stroke="#000000"
-                            stroke-width="1.5"
-                            stroke-linejoin="round">
-                        </path>
-                    </svg>
-                    
-                    <!--Temperature Sectio & Unit of Measure-->
-                    <span class="temperature">
-                        16 <small>°C</small>
-                    </span>
-                </div>
-            </div> <!--Temp and Loc section end here-->
-
-
-            <!--Weather Content/Info-->
-            <section class="weather-info">
-               <p class="info">
-                Thursday 08:31, Cloudy |
-                UV Index :<b> Low</b> 
-                Humidity : <b>80%</b> |
-                Windspeed : <b>5.36km/h</b>
-               </p>
-           </section>
-           
-           <ul>
-                <li> ☁Fri</li>
-                <li>⛈Sat</li>
-                <li>⛈Sun</li>
-                <li>⛈Mon</li>
-                <li>🌤Tues</li>
-            </ul>
-
-          
-        </section>
-
-        <!--Seperation-->
-        <hr>
-     
-        <!--Footer Section-->
-            <footer>
-            <p>This site was coded by
-                <a href="https://www.linkedin.com/in/mildred-t-8978452b5/" target="_blank">
-                    Millie Taffa
-                </a>
-                and is hosted on 
-                <a href="https://github.com/MillieTaffa/SheCodesChallenge-WeatherApp" target="_blank">
-                    GitHub
-                </a>
-                and 
-                <a href="https://weatherapp-s-c.netlify.app/" target="_blank">
-                    Netlify
-                </a>
-            </p>
-            </footer>
-    </div>
+                <div class="temp"> 
+                    <!--Location-->
+                    <h1 class="location" id="place">
+                        Krugersdorp
+                    </h1>   
+                    <!--SVG/ Icon/Emoji-->
+                    <div class="temprate">
+                        <div?xml version="1.0" encoding="UTF-8"? class="temp-unit">
+                        <svg width="30px" height="40px"
+                            stroke-width="1.5" viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            color="#000000">
+                                <path
+                                d="M12 4C6 4 6 8 6 10C4.33333 10 1 11 1 15C1 19 4.33333 20 6 20H18C19.6667 20 23 19 23 15C23 11 19.6667 10 18 10C18 8 18 4 12 4Z"
+                                stroke="#000000"
+                                stroke-width="1.5"
+                                stroke-linejoin="round">
+                            </path>
+                        </svg>
+                        
+                        <!--Temperature Sectio & Unit of Measure-->
+                        <span class="temperature">
+                            16 <small>°C</small>
+                        </span>
+                    </div>
+                </div> <!--Temp and Loc section end here-->
 
 
+                <!--Weather Content/Info-->
+                <section class="weather-info">
+                <p class="info">
+                    Thursday 08:31, Cloudy |
+                    UV Index :<b> Low</b> 
+                    Humidity : <b>80%</b> |
+                    Windspeed : <b>5.36km/h</b>
+                </p>
+            </section>
+            
+            <ul>
+                    <li> ☁Fri</li>
+                    <li>⛈Sat</li>
+                    <li>⛈Sun</li>
+                    <li>⛈Mon</li>
+                    <li>🌤Tues</li>
+                </ul>
 
-  </div>  
-  <script src="index.js"></script>
-</body>
-</html>
+            
+            </section>
+
+            <!--Seperation-->
+            <hr>
+        
+            <!--Footer Section-->
+                <footer>
+                <p>This site was coded by
+                    <a href="https://www.linkedin.com/in/mildred-t-8978452b5/" target="_blank">
+                        Millie Taffa
+                    </a>
+                    and is hosted on 
+                    <a href="https://github.com/MillieTaffa/SheCodesChallenge-WeatherApp" target="_blank">
+                        GitHub
+                    </a>
+                    and 
+                    <a href="https://weatherapp-s-c.netlify.app/" target="_blank">
+                        Netlify
+                    </a>
+                </p>
+                </footer>
+        </div>
+
+
+
+    </div>  
+    <script src="index.js"></script>
+    </body>
+    </html>
