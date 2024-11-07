@@ -3,23 +3,128 @@ body{
     margin: 0 auto;
     padding: 50px 50px;
 }
+.icon{
+    text-align: center;
+    padding: 25px 0;
+    margin: 0 auto;
+    font-family: Bona Nova SC;
+}
 
+/*Styling of manin content*/
 .content{
     background-color: #fff;
     max-width: 1000px;
     margin: 30px auto;
     padding: 0 40px;
+    border-radius: 10px;
+    box-shadow: 9px 9px 9px rgba(0, 0, 0,0.3);
+}
+.location, .temperature{
+    width: fit-content;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    -moz-box-align: center;
+}
+.temp-unit{
+    height: fit-content;
+    margin: 33.200px 45px;
+}
+.temp{
+    display: flex;
+    margin: 0;
+    width: fit-content;
+    height: 100px ;
 }
 
+
+/*Search styling*/
+.search,.go{
+padding: 5px;
+border-radius: 5px;
+border: solid 1.5px;
+}
+.search{
+    width: 87%;
+}
+.go{
+    width: 8%;
+    background: blue;
+    color: #f9f7fe;
+    transition: all ease 1s;
+}
+.go:hover{
+    background: #f9f7fe;
+    color: blue;
+    transform: scale(1.1);
+}
+
+
+
+/*miscellenious*/
+.weather-info{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    width: 100%;
+    color: darkslategray;
+}
+b{
+    color: darkgray;
+}
+.degrees{
+    font-size: 20px;
+}
+/*Footer styling*/
 footer{
     text-align: center;
     color: rgb(103, 101, 101);
     cursor: default;
     padding: 5px;
 }
-
+/*Link styling*/
 a{
     text-decoration: none;
     color: blueviolet;
     cursor: default;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 25px auto;
+    font-size: 20px;
+    font-family: Bona Nova SC;
+    color: darkslategray;;
+}
+
+/*Conditional Themes*/
+.rainy{
+    background-image: url(cloudy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sunny{
+    background-image: url(sunny.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*Imported font*/
+.bona-nova-sc-regular {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bona-nova-sc-bold {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bona-nova-sc-regular-italic {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: italic;
 }
