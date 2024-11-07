@@ -22,6 +22,7 @@ body{
     box-shadow: 9px 9px 9px rgba(0, 0, 0,0.3);
 }
 .location, .temperature{
+    align-items: center;
     width: fit-content;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
@@ -77,12 +78,13 @@ border: solid 1.5px;
 /*miscellenious*/
 .weather-info{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 20px;
     width: 100%;
     color: darkslategray;
+    text-align: center;
 }
 b{
-    color: darkgray;
+    color: rgb(67, 67, 67);
 }
 .degrees{
     font-size: 20px;
