@@ -10,7 +10,7 @@
     <title>My Weather App</title>
 </head>
 <body>
-    <!--Main Content-->
+    <!--Main Content--> 
   <div class="content">
     <header class="logo">
         <!--Logo Section-->
@@ -34,10 +34,16 @@
         </h1>
     </header>
     <!--Search Panel-->
-    <div class="search-panel">
-        <input type="text" placeholder="Enter a city" class="search" id="input">
-        <input type="button" value="Search" class="go" id="output">
-    </div>
+    <form class="search-panel" id="search-engine">
+        <input type="text" 
+        placeholder="Enter a city" 
+        class="search" 
+        id="input">
+        <input type="button" 
+        value="Search" 
+        class="go" 
+        id="output">
+    </form>
     <div class="items">
         <section class="main-content">
 
@@ -45,33 +51,34 @@
 
             <div class="temp"> 
                 <!--Location-->
-                <h1 class="location">
+                <h1 class="location" id="place">
                     Krugersdorp
                 </h1>   
                 <!--SVG/ Icon/Emoji-->
-                <div?xml version="1.0" encoding="UTF-8"? class="temp-unit">
-                <svg width="30px" height="40px"
-                    stroke-width="1.5" viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    color="#000000">
-                        <path
-                        d="M12 4C6 4 6 8 6 10C4.33333 10 1 11 1 15C1 19 4.33333 20 6 20H18C19.6667 20 23 19 23 15C23 11 19.6667 10 18 10C18 8 18 4 12 4Z"
-                        stroke="#000000"
-                        stroke-width="1.5"
-                        stroke-linejoin="round">
-                    </path>
-                </svg>
-                
-                <!--Temperature Section-->
-                <span class="temperature">
-                    16
-                </span>
-
-                <!--Unit of Measure-->
-                <span class="degrees">
-                    °C
-                </span>
+                <div class="temprate">
+                    <div?xml version="1.0" encoding="UTF-8"? class="temp-unit">
+                    <svg width="30px" height="40px"
+                        stroke-width="1.5" viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        color="#000000">
+                            <path
+                            d="M12 4C6 4 6 8 6 10C4.33333 10 1 11 1 15C1 19 4.33333 20 6 20H18C19.6667 20 23 19 23 15C23 11 19.6667 10 18 10C18 8 18 4 12 4Z"
+                            stroke="#000000"
+                            stroke-width="1.5"
+                            stroke-linejoin="round">
+                        </path>
+                    </svg>
+                    
+                    <!--Temperature Section-->
+                    <span class="temperature">
+                        16
+                        <!--Unit of Measure-->
+                        <span class="degrees">
+                            °C
+                        </span>
+                    </span>
+                </div>
             </div> <!--Temp and Loc section end here-->
 
 

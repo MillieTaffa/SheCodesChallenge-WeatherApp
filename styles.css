@@ -3,9 +3,6 @@ body{
     margin: 0 auto;
     padding: 90px 70px;
     cursor: default;
-    background-image: url(cloudy.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .icon{
     text-align: center;
@@ -32,6 +29,12 @@ body{
     color: darkslategray;
     
 }
+.temprate{
+    position: absolute;
+    margin: 30px;
+    right: 1%;
+    font-weight: bold;
+}
 .temp-unit{
     height: fit-content;
     margin: 33.200px 45px;
@@ -51,27 +54,27 @@ body{
 /*Search styling*/
 .search,.go{
 padding: 10px;
-margin: ;
 border-radius: 5px;
 border: solid 1.5px;
 }
 .search{
     width: 75%;
+    background: transparent;
 }
 .go{
     width: 14%;
     padding: 11px 5px;
-    background: blue;
+    background: darkslategray;
     color: #f9f7fe;
     cursor: pointer;
     transition: all ease 2ms;
 }
 .go:hover{
     background: #f9f7fe;
-    color: blue;
+    color: darkgrey;
 }
 .go:active{
-    background: rgb(2, 2, 94);
+    background: rgb(35, 59, 59);
     color: #f9f7fe;
 }
 .location{
